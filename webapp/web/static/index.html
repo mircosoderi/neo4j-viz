@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+function deleteCircle(circle) {
+	myWorker.postMessage($(circle).attr("id").match(/\d+/));
+}
+
+const myWorker = new Worker("worker.js");
+myWorker.onmessage = (e) => {
+   items = JSON.parse(e.data)
+   items.forEach(function (item, index) {
+	$("#dot"+item["id"]).remove();
+	if(!item["deleted"]) {
+		$("#svg").append('<g onClick="deleteCircle(this);" id="dot'+item["id"]+'"><circle id="circle'+item["id"]+'" class="circle" cx="'+item["x"]+'" cy="'+item["y"]+'" r="'+item["radius"]+'" fill="'+item["color"]+'" ></circle><text x="'+item["x"]+'" y="'+item["y"]+'" text-anchor="middle" alignmentBaseline="central" stroke="black" stroke-width="1px" dy=".3em">'+item["label"]+'</text></g>');
+        }
+	$("body").html($("body").html()); 
+   });	
+};
+
+</script>
+<style>
+g {
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <svg id="svg" width="1000" height="1000">
+  </svg>
+</body>
+</html>

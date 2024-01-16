@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "default": null,
+      "name": "id",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "default": null,
+      "name": "label",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "x",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "default": null,
+      "name": "y",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "default": null,
+      "name": "radius",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "default": null,
+      "name": "color",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "deleted",
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    {
+      "default": null,
+      "name": "timestamp",
+      "type": [
+        "null",
+        "long"
+      ]
+    }
+  ],
+  "name": "ConnectDefault",
+  "namespace": "io.confluent.connect.avro",
+  "type": "record"
+}

@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "default": null,
+      "name": "id",
+      "type": [
+        "null",
+        "long"
+      ]
+    }
+  ],
+  "name": "ConnectDefault",
+  "namespace": "io.confluent.connect.avro",
+  "type": "record"
+}

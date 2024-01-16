@@ -1,0 +1,4 @@
+confluent-kafka
+avro
+mysql
+mysql-connector-python

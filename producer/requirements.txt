@@ -1,0 +1,4 @@
+confluent-kafka
+mysql
+mysql-connector-python
+pymongo
